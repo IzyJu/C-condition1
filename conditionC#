@@ -1,0 +1,39 @@
+using System;
+
+namespace Condition._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("tape un entier maximal :");
+            string limit1 = Console.ReadLine();
+            Console.Write("tape un entier minimal :");
+            string limit2 = Console.ReadLine();
+            Console.WriteLine("tape un nombre :");
+            string nombreChoisis = Console.ReadLine();
+
+            int limitInt1 = Convert.ToInt32(limit1);
+            int limitInt2 = Convert.ToInt32(limit2);
+            int nombreChoisiInt = Convert.ToInt32(nombreChoisis);
+
+            if(nombreChoisiInt >= limitInt1)
+            {
+                Console.WriteLine("You have entered " + nombreChoisiInt + " which is greater than " + limitInt1 + " which is the maximum");
+                nombreChoisiInt = limitInt1;
+                Console.WriteLine("Resulting integer " + nombreChoisiInt);
+            }
+            else if(nombreChoisiInt <= limitInt2)
+            {
+                Console.WriteLine("You have entered " + nombreChoisiInt + " which is lower than " + limitInt2 + " which is the minimum");
+                nombreChoisiInt = limitInt2;
+                Console.WriteLine("Resulting integer " + nombreChoisiInt);
+            }
+            else
+            {
+                Console.WriteLine("Resulting integer " + nombreChoisiInt);
+            }
+
+        }
+    }
+}
